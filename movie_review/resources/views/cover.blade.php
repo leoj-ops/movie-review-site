@@ -1,3 +1,6 @@
+@if(session('failure'))
+	<h3>{{session('failure')}}</h3>
+@endif
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -100,7 +103,7 @@
 					<input
 						type="password"
 						placeholder="Enter Password"
-						name="psw"
+						name="entpsw"
 						required
 						class="modal-psw"
 					/>
