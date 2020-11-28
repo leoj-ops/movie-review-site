@@ -26,7 +26,22 @@
             </li>
         </ul>
     </nav>
-    
+    @foreach ($movie as $value)              
+        <tr>
+            <td>{{$value->mov_id}}</td>
+            <td>{{$value->mov_title}}</td>
+            <td>{{$value->mov_year}}</td>
+            <td>{{$value->mov_lang}}</td>
+            <td>{{$value->mov_len}}</td>
+            <td>{{$value->mov_desc}}</td>
+            <td>{{$value->mov_img}}</td>
+            <td>{{$value->mov_genre}}</td>
+            <td>{{$value->mov_dir}}</td>
+            <td>{{$value->mov_budget}}</td>
+            <td>{{$value->mov_cumulative}}</td>
+        </tr><br>    
+    @endforeach
+
 
 </body>
 </html>

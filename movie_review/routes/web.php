@@ -56,9 +56,9 @@ Route::get('/update', function () {
         return view('update');
 });
 
-Route::get('/display', function () {
-        return view('display');
-});
+// Route::get('/display', function () {
+//         return view('display');
+// });
 
 Route::get('/delete', function () {
         return view('delete');
@@ -66,7 +66,7 @@ Route::get('/delete', function () {
 
 Route::post('dbUpdate',[dbManager::class, 'dbUpdate']);
 
-// Route::post('dbDisplay',[dbManager::class, 'dbDisplay']);
+Route::get('/display',[dbManager::class, 'dbDisplay']);
 
 Route::post('dbInsert',[dbManager::class, 'dbInsert']);
 

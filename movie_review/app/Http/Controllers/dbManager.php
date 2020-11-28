@@ -16,6 +16,8 @@ class dbManager extends Controller
 
     function dbDisplay(Request $req){
         // echo "This is Display";
+        $movie = DB::table('movies')->get();
+        return view('display', ['movie' => $movie]);
     }
 
     function dbInsert(Request $req){
@@ -63,11 +65,14 @@ class dbManager extends Controller
             print_r($movId[0]['mov_id']);
             DB::table('movie_cast')->insert(['mov_id' => $movId[0]['mov_id'], 'act_id' => $actId]);
         } 
-        return redirect('display');
+        return redirect('/display');
     }
 
     function dbDelete(Request $req){
         // echo "This is delete";
-
+        $data=$req->input();
+        DB::table('movies')->where('mov_id', '=', $data['number'])->delete();
+        // DB::table('movie_cast')->where('mov_id', '=', $data['number'])->delete();
+        return redirect('/display');
     }
 }
