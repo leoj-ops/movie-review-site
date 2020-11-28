@@ -27,7 +27,7 @@
         </ul>
     </nav>
 
-    <form class="insert" action="">
+    <form class="insert" method="POST" action="dbInsert">
         <label for="title">Title</label>
         <input type="text" name="title" id="title"><br>
         <label for="year">Year</label>
@@ -48,6 +48,8 @@
         <input type="text" name="bgt" id="bgt"><br>
         <label for="cast">Cast</label>
         <input type="text" name="cast" id="cast"><br>
+        @csrf
+        <button type="submit">Submit</button>
     </form>
 </body>
 </html>

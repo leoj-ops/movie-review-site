@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Login;
 use App\Http\Controllers\SignUp;
+use App\Http\Controllers\dbManager;
 
 /*
 |--------------------------------------------------------------------------
@@ -62,3 +63,11 @@ Route::get('/display', function () {
 Route::get('/delete', function () {
         return view('delete');
 });
+
+Route::post('dbUpdate',[dbManager::class, 'dbUpdate']);
+
+// Route::post('dbDisplay',[dbManager::class, 'dbDisplay']);
+
+Route::post('dbInsert',[dbManager::class, 'dbInsert']);
+
+Route::post('dbDelete',[dbManager::class, 'dbDelete']);

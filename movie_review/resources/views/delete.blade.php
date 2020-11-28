@@ -27,9 +27,11 @@
         </ul>
     </nav>
     
-    <form class="delete" action="">
+    <form class="delete" method="POST" action="dbDelete">
         <label for="number">Movie ID</label>
         <input type="number" name="number" id="number">
+        @csrf
+        <button type="submit">Submit</button>
     </form>
 </body>
 </html>

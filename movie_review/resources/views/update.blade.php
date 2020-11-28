@@ -27,7 +27,7 @@
         </ul>
     </nav>
     
-    <form class="update" action="">
+    <form class="update" method="POST" action="dbUpdate">
         <label for="number">Movie ID</label>
         <input type="number" name="number" id="number"><br>
         <label for="title">Title</label>
@@ -50,7 +50,8 @@
         <input type="text" name="bgt" id="bgt"><br>
         <label for="cast">Cast</label>
         <input type="text" name="cast" id="cast"><br>
-        <button>Submit</button>
+        @csrf
+        <button type="submit">Submit</button>
     </form>
 </body>
 </html>
