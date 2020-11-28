@@ -140,6 +140,10 @@ footer ul {
 	margin-right: auto;
 	padding: 20px;
 }
+
+.nav-link {
+	color: white;
+}
 /* Nav ends */
 ::placeholder {
 	color: #abb7c4;
