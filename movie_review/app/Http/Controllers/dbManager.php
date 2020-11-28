@@ -19,10 +19,14 @@ class dbManager extends Controller
     }
 
     function dbInsert(Request $req){
-        // echo "This is insert";
+        $data = $req->input();
+        DB::table('movies')->insert(['mov_title'=>$data['title'], 'mov_year'=>$data['year'], 'mov_lang'=>$data['lang'], 'mov_len'=>$data['len'], 'mov_desc'=>$data['desc'], 'mov_img'=>$data['img'], 'mov_genre'=>$data['genre']]);
+        
+        // echo ;
     }
 
     function dbDelete(Request $req){
         // echo "This is delete";
+
     }
 }

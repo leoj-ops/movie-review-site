@@ -48,6 +48,10 @@
         <input type="text" name="bgt" id="bgt"><br>
         <label for="cast">Cast</label>
         <input type="text" name="cast" id="cast"><br>
+        <label for="prod_name">Production House</label>
+        <input type="text" name="prod_name" id="prod_name"><br>
+        <label for="pro_address">Production Address</label>
+        <textarea name="pro_address" id="pro_address"></textarea><br>
         @csrf
         <button type="submit">Submit</button>
     </form>
