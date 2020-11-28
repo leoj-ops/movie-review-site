@@ -1,0 +1,21 @@
+body {
+    background-color: #020d18;
+
+}
+
+.admin-navbar {
+    background-color: rgb(1, 24, 37);
+}
+
+.admin-navbar .nav-item {
+    display: inline-block;
+    margin: 0 0.8vw;
+}
+
+.admin-navbar .nav-link {
+    color: white;    
+}
+
+.insert, .update, .delete {
+    color: white;
+}

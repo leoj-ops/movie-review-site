@@ -34,14 +34,31 @@ Route::get('/logout', function () {
     }
     return view('cover');
 });
+
 Route::group(['middleware'=>['protectedPage']],function(){
 
-    Route::get('/movies', function () {
-    return view('movies');
+        Route::get('/movies', function () {
+        return view('movies');
+    });
+
+        Route::get('/index', function () {
+        return view('index');
+    });
+
 });
 
-    Route::get('/index', function () {
-    return view('index');
+Route::get('/insert', function () {
+        return view('insert');
 });
 
+Route::get('/update', function () {
+        return view('update');
+});
+
+Route::get('/display', function () {
+        return view('display');
+});
+
+Route::get('/delete', function () {
+        return view('delete');
 });

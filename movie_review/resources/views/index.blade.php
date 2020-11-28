@@ -22,10 +22,10 @@
   <nav class="navbar index-head">
       <ul>
         <li class="nav-items"><img class="logo-index" src="images/logo1.png" alt="Logo"></li>
-        <li class="nav-items">Home</li>
-        <li class="nav-items">Movies</li>
-        <li class="nav-items">Celebrities</li>
-        <li class="nav-items"><a href="/logout" alt="Click to logout">{{session('user')}}</a></li>
+        <li class="nav-items"><a href="/index">Home</a></li>
+        <li class="nav-items"><a href="/movies">Movies</a></li>
+        <li class="nav-items"><a href="/index">celebrities</a></li>
+        <li class="nav-items"><a href="/logout">{{session('user')}}</a></li>
       </ul>
   </nav>
   
