@@ -28,8 +28,6 @@
     </nav>
     
     <form class="update" method="POST" action="dbUpdate">
-        <label for="number">Movie ID</label>
-        <input type="number" name="number" id="number"><br>
         <label for="title">Title</label>
         <input type="text" name="title" id="title"><br>
         <label for="year">Year</label>
@@ -40,7 +38,7 @@
         <input type="text" name="len" id="len"><br>
         <label for="desc">Description</label>
         <textarea name="desc" id="desc"></textarea><br>
-        <label for="img">Image</label>
+        <label for="img">Movie Image</label>
         <input type="text" name="img" id="img"><br>
         <label for="genre">Genre</label>
         <input type="text" name="genre" id="genre"><br>
@@ -48,8 +46,14 @@
         <input type="text" name="dirName" id="dirName"><br>
         <label for="bgt">Budget</label>
         <input type="text" name="bgt" id="bgt"><br>
+        <label for="mov_cumu">Cumulative</label>
+        <input type="text" name="mov_cumu" id="mov_cumu"><br>
         <label for="cast">Cast</label>
         <input type="text" name="cast" id="cast"><br>
+        <label for="act_gender">Actor Gender</label>
+        <input type="text" name="act_gender" id="act_gender"><br>
+        <label for="act_img">Actor Image</label>
+        <input type="text" name="act_img" id="act_img"><br>
         <label for="prod_name">Production House</label>
         <input type="text" name="prod_name" id="prod_name"><br>
         <label for="pro_address">Production Address</label>
