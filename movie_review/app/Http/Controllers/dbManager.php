@@ -10,10 +10,10 @@ class dbManager extends Controller
 {
     //
     function dbUpdate(Request $req){
-       $data = $req->input();
-       $affected = DB::table('movies')
-       ->where('mov_id', $data['mov_id'])
-       ->update(['mov_title'=>$data['title'], 'mov_year'=>$data['year'], 'mov_lang'=>$data['lang'], 'mov_len'=>$data['len'], 'mov_desc'=>$data['desc'], 'mov_img'=>$data['img'], 'mov_genre'=>$data['genre'], 'mov_dir'=>$data['dirName'], 'mov_budget'=>$data['bgt'], 'mov_cumulative'=>$data['mov_cumu']]);
+        $data = $req->input();
+        $affected = DB::table('movies')
+        ->where('mov_id', $data['mov_id'])
+        ->update(['mov_title'=>$data['title'], 'mov_year'=>$data['year'], 'mov_lang'=>$data['lang'], 'mov_len'=>$data['len'], 'mov_desc'=>$data['desc'], 'mov_img'=>$data['img'], 'mov_genre'=>$data['genre'], 'mov_dir'=>$data['dirName'], 'mov_budget'=>$data['bgt'], 'mov_cumulative'=>$data['mov_cumu']]);
 
 
         // echo "This is update";
@@ -80,6 +80,7 @@ class dbManager extends Controller
     function dbDelete(Request $req){
         // echo "This is delete";
         $data=$req->input();
+        DB::table('movie_cast')->where('mov_id', '=', $data['number'])->delete();
         DB::table('movies')->where('mov_id', '=', $data['number'])->delete();
         // DB::table('movie_cast')->where('mov_id', '=', $data['number'])->delete();
         return redirect('/display');
