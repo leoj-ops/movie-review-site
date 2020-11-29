@@ -62,7 +62,7 @@ class dbManager extends Controller
             DB::table('movie_cast')
             ->where('mov_id', $data['mov_id'])
             ->update(['act_id' => $actId]);
-        } 
+        } return redirect('/display');
         // echo "This is update";
 
     }
