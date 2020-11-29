@@ -74,5 +74,8 @@ class dbManager extends Controller
         DB::table('movies')->where('mov_id', '=', $data['number'])->delete();
         // DB::table('movie_cast')->where('mov_id', '=', $data['number'])->delete();
         return redirect('/display');
+
+        
+
     }
 }
