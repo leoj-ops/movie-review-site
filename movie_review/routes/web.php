@@ -71,3 +71,7 @@ Route::get('/display',[dbManager::class, 'dbDisplay']);
 Route::post('dbInsert',[dbManager::class, 'dbInsert']);
 
 Route::post('dbDelete',[dbManager::class, 'dbDelete']);
+
+Route::get('/moviedata', function () {
+    return view('moviedata');
+});
