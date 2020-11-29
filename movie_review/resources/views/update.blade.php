@@ -28,6 +28,8 @@
     </nav>
     
     <form class="update" method="POST" action="dbUpdate">
+        <label for="mov_id">Movie Id</label>
+        <input type="text" name="mov_id" id="mov_id"><br>
         <label for="title">Title</label>
         <input type="text" name="title" id="title"><br>
         <label for="year">Year</label>

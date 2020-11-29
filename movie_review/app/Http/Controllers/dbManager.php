@@ -10,6 +10,12 @@ class dbManager extends Controller
 {
     //
     function dbUpdate(Request $req){
+       $data = $req->input();
+       $affected = DB::table('movies')
+       ->where('mov_id', $data['mov_id'])
+       ->update(['mov_title'=>$data['title'], 'mov_year'=>$data['year'], 'mov_lang'=>$data['lang'], 'mov_len'=>$data['len'], 'mov_desc'=>$data['desc'], 'mov_img'=>$data['img'], 'mov_genre'=>$data['genre'], 'mov_dir'=>$data['dirName'], 'mov_budget'=>$data['bgt'], 'mov_cumulative'=>$data['mov_cumu']]);
+
+
         // echo "This is update";
 
     }
@@ -47,6 +53,9 @@ class dbManager extends Controller
         $mov = DB::table('movies')->whereIn('mov_title',[$data['title']])->get();
         $movId = json_decode(json_encode($mov), true);
         $cast = explode(',',$data['cast']);
+        $cast_gender = explode(',',$data['act_gender']);
+        $cast_img = explode(',',$data['act_img']);
+        $c=0;
         foreach($cast as $act){
             $act_value=DB::table('actor')->where('act_name','=',$act,)->exists();
             if($act_value==1){
@@ -56,7 +65,7 @@ class dbManager extends Controller
                 // echo $array[0]['prod_id'];
             }
             else{
-                DB::table('actor')->insert(['act_name'=>$act, 'act_gender'=>$data['act_gender'], 'act_img'=>$data['act_img']]);
+                DB::table('actor')->insert(['act_name'=>$act, 'act_gender'=> $cast_gender[$c], 'act_img'=>$cast_img[$c]]);
                 $actDb = DB::table('actor')->whereIn('act_name',[$act])->get();
                 $array = json_decode(json_encode($actDb), true);
                 // DB::table('movies')->insert(['prod_id'=>$array[0]['prod_id']]);
