@@ -62,7 +62,9 @@ class dbManager extends Controller
             DB::table('movie_cast')
             ->where('mov_id', $data['mov_id'])
             ->update(['act_id' => $actId]);
-        } return redirect('/display');
+        } 
+        $req->session()->flash('message','The data has been updated');
+        return redirect('/update');
         // echo "This is update";
 
     }
@@ -121,7 +123,8 @@ class dbManager extends Controller
             print_r($movId[0]['mov_id']);
             DB::table('movie_cast')->insert(['mov_id' => $movId[0]['mov_id'], 'act_id' => $actId]);
         } 
-        return redirect('/display');
+        $req->session()->flash('message','The data has been inserted');
+        return redirect('/insert');
     }
 
     function dbDelete(Request $req){
@@ -130,7 +133,8 @@ class dbManager extends Controller
         DB::table('movie_cast')->where('mov_id', '=', $data['number'])->delete();
         DB::table('movies')->where('mov_id', '=', $data['number'])->delete();
         // DB::table('movie_cast')->where('mov_id', '=', $data['number'])->delete();
-        return redirect('/display');
+        $req->session()->flash('message','The data has been deleted');
+        return redirect('/delete');
 
         
 
