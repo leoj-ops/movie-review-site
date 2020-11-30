@@ -87,3 +87,16 @@ ul {
 .rate > label:hover ~ input:checked ~ label {
     color: #c59b08;
 }
+
+.user-text {
+    width: 95%;
+    height: 10vh;
+    padding: 7px;
+}
+
+.review-submit {
+    border:  rgb(196, 230, 7) solid 2px;
+    border-radius: 50px;
+    background-color: #020d18;
+    color: rgb(196, 230, 7);
+}
