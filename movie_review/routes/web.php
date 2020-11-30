@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Login;
 use App\Http\Controllers\SignUp;
 use App\Http\Controllers\dbManager;
+use App\Http\Controllers\movieData;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,18 +17,18 @@ use App\Http\Controllers\dbManager;
 |
 */
 
-/*Route::get('/', function () {
-    return view('cover');
-});*/
-// Route::view('/','cover');
+
 Route::get('/', function () {
     if(session()->has('user')){
         return redirect('index');
     }
     return view('cover');
 });
+
 Route::post('login',[Login::class, 'userLogin']);
+
 Route::post('signup',[SignUp::class, 'userSign']);
+
 Route::get('/logout', function () {
     if(session()->has('user'))
     {
@@ -38,11 +39,9 @@ Route::get('/logout', function () {
 
 Route::group(['middleware'=>['protectedPage']],function(){
 
-        Route::get('/movies', function () {
-        return view('movies');
-    });
+    Route::get('/movies',[movieData::class, 'viewMovies']);
 
-        Route::get('/index', function () {
+    Route::get('/index', function () {
         return view('index');
     });
 
@@ -56,9 +55,7 @@ Route::get('/update', function () {
         return view('update');
 });
 
-// Route::get('/display', function () {
-//         return view('display');
-// });
+
 
 Route::get('/delete', function () {
         return view('delete');
@@ -66,7 +63,7 @@ Route::get('/delete', function () {
 
 Route::post('dbUpdate',[dbManager::class, 'dbUpdate']);
 
-Route::get('/display',[dbManager::class, 'dbDisplay']);
+Route::get('/display/{id}',[dbManager::class, 'dbDisplay']);
 
 Route::post('dbInsert',[dbManager::class, 'dbInsert']);
 

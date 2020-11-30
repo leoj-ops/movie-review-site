@@ -69,10 +69,12 @@ class dbManager extends Controller
 
     }
 
-    function dbDisplay(Request $req){
-        // echo "This is Display";
-        $movie = DB::table('movies')->get();
-        return view('display', ['movie' => $movie]);
+    function dbDisplay(Request $req, $id){
+        // echo $id;
+        $movie = DB::table('movies')->whereIn('mov_id',[$id])->get();
+        $actor = DB::table('actor')->whereIn('act_id',[$id])->get();
+        $prod = DB::table('production')->whereIn('prod_id',[$id])->get();
+        return view('display')->with('movie', $movie)->with('actor', $actor)->with('prod', $prod);
     }
 
     function dbInsert(Request $req){
@@ -132,6 +134,7 @@ class dbManager extends Controller
         $data=$req->input();
         DB::table('movie_cast')->where('mov_id', '=', $data['number'])->delete();
         DB::table('movies')->where('mov_id', '=', $data['number'])->delete();
+        DB::table('reviews')->where('mov_id', '=', $data['number'])->delete();
         // DB::table('movie_cast')->where('mov_id', '=', $data['number'])->delete();
         $req->session()->flash('message','The data has been deleted');
         return redirect('/delete');
