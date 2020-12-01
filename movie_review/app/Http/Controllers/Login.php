@@ -12,12 +12,14 @@ class Login extends Controller
     function userLogin(Request $req){
         $userData=user_date::all();
         $data = $req->input();
+        $salt = 'XyZzy12*_';
+        $check = hash('md5', $salt.$data['psw']);
         $flag=0;
         if($data['uname']=='admin'){
-            return redirect('/display');
+            return redirect('/insert');
         }
         foreach($userData as $value){
-            if($data['uname']==$value->uname && $data['psw']==$value->psw){
+            if($data['uname']==$value->uname && $check==$value->psw){
                 $flag=1;
             }
         }

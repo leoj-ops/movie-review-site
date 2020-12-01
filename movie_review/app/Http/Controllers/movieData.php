@@ -13,7 +13,14 @@ class movieData extends Controller
         $count = DB::table('movies')->count();
         $movie = DB::table('movies')->select('mov_id','mov_title','mov_img')->get();
         return view('movies')->with('movie', $movie)->with('count',$count);
-        echo $count;
+        // echo $count;
+    }
+
+    function viewCelebrities(Request $req){
+        $count = DB::table('actor')->count();
+        $actor = DB::table('actor')->select('act_name','act_img')->get();
+        return view('celebrities')->with('actor', $actor)->with('count',$count);
+        // echo $count;
     }
 
     function movieDb(Request $req, $id){
@@ -34,5 +41,16 @@ class movieData extends Controller
         // $actor = DB::table('actor')->whereIn('act_id',[$act_id])->get();
         // print_r($actor);
         return view('moviedata')->with('movie', $movie)->with('actor', $actor)->with('prod', $prod);
+    }
+
+    function feedBack(Request $req){
+        $data = $req->input();
+        // print_r(session('user'));
+        DB::table('feedback')
+            ->updateOrInsert(['user' => session('user')],
+                            ['impression' => $data['impression'], 'hear' => $data['hear'], 'missing' => $data['missing'], 'recommend' => $data['recommend'], 'useful' => $data['useful'], 'problems' => $data['problems']]
+                        );
+        $req->session()->flash('message','Your feedback has been successfully submitted');
+        return redirect('/feedback');
     }
 }

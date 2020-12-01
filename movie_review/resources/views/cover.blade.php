@@ -106,7 +106,9 @@
 						name="entpsw"
 						required
 						class="modal-psw"
+						id="entpsw"
 					/>
+					<p id="err" style="color:rgb(196, 230, 7)"></p>
 					<!--Confirm Password-->
 					<input
 						type="password"
@@ -114,10 +116,12 @@
 						name="psw"
 						required
 						class="modal-psw"
+						id="psw"
 					/>
+					<p id="error" style="color:rgb(196, 230, 7)"></p>
 					@csrf
 					<!-- Submit Button -->
-					<button type="submit" class="modal-btn">Sign Up</button>
+					<button type="submit" class="modal-btn" id="btn">Sign Up</button>
 					<button
 						type="submit"
 						class="modal-btn"
@@ -192,5 +196,40 @@
 			integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
 			crossorigin="anonymous"
 		></script>
+		<script>
+			document.getElementById("psw").onchange = function() {confirmPassword()};
+			document.getElementById("entpsw").onchange = function() {lenPassword()}
+			const btn = document.getElementById("btn");
+			btn.disabled = true;
+			function confirmPassword() {
+				var x = document.getElementById("psw");
+				var y = document.getElementById("entpsw");
+				if(x.value != y.value){
+					document.getElementById("error").innerHTML="Password doesn't match";
+				}
+				else if(x.value == y.value){
+					document.getElementById("error").innerHTML="";
+					btn.disabled = false;
+				}
+			}
+			function lenPassword() {
+				var y = document.getElementById("entpsw");
+				if(y.value.length<6){
+					document.getElementById("err").innerHTML="Your password is too short";
+				}
+				else if (!y.value.match(/[A-Z]/g)){
+        			document.getElementById("err").innerHTML="Your password must contain at least one uppercase."; 
+    			}
+				else if (!y.value.match( /[0-9]/g)){
+        			document.getElementById("err").innerHTML="Your password must contain at least one number."; 
+    			}
+				else if (!y.value.match(/[a-z]/g)){
+        			document.getElementById("err").innerHTML="Your password must contain at least one lowercase."; 
+    			}
+				else{
+					document.getElementById("err").innerHTML="";
+				}
+			}
+		</script>
 	</body>
 </html>

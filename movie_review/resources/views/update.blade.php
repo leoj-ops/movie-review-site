@@ -1,6 +1,9 @@
 @if(session('message'))
 	<h3>{{session('message')}}</h3>
 @endif
+@if(session('message'))
+	<h3>{{session('message')}}</h3>
+@endif
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,9 +18,6 @@
     <nav class="navbar admin-navbar">
         <ul>
             <li class="nav-item"><a  href="/"><img class="logo-index" src="images/logo1.png" alt="Logo"></a></li>
-            <li class="nav-item">
-                <a class="nav-link" href="/display">Display</a>
-            </li>
             <li class="nav-item">
                 <a class="nav-link" href="/insert">Insert</a>
             </li>

@@ -41,8 +41,14 @@ Route::group(['middleware'=>['protectedPage']],function(){
 
     Route::get('/movies',[movieData::class, 'viewMovies']);
 
+    Route::get('/celebrities',[movieData::class, 'viewCelebrities']);
+
     Route::get('/index', function () {
         return view('index');
+    });
+
+    Route::get('/feedback', function () {
+        return view('feedback');
     });
 
     Route::get('/moviedata/{id}',[movieData::class, 'movieDb']);
@@ -63,16 +69,11 @@ Route::get('/delete', function () {
 
 Route::post('dbUpdate',[dbManager::class, 'dbUpdate']);
 
-Route::get('/display/{id}',[dbManager::class, 'dbDisplay']);
-
 Route::post('dbInsert',[dbManager::class, 'dbInsert']);
 
 Route::post('dbDelete',[dbManager::class, 'dbDelete']);
 
+Route::post('feedback',[movieData::class,'feedBack']);
 // Route::get('/moviedata', function () {
 //     return view('moviedata');
 // });
-
-Route::get('/feedback', function () {
-    return view('feedback');
-});

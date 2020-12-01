@@ -69,13 +69,13 @@ class dbManager extends Controller
 
     }
 
-    function dbDisplay(Request $req, $id){
-        // echo $id;
-        $movie = DB::table('movies')->whereIn('mov_id',[$id])->get();
-        $actor = DB::table('actor')->whereIn('act_id',[$id])->get();
-        $prod = DB::table('production')->whereIn('prod_id',[$id])->get();
-        return view('display')->with('movie', $movie)->with('actor', $actor)->with('prod', $prod);
-    }
+    // function dbDisplay(Request $req, $id){
+    //     // echo $id;
+    //     $movie = DB::table('movies')->whereIn('mov_id',[$id])->get();
+    //     $actor = DB::table('actor')->whereIn('act_id',[$id])->get();
+    //     $prod = DB::table('production')->whereIn('prod_id',[$id])->get();
+    //     return view('display')->with('movie', $movie)->with('actor', $actor)->with('prod', $prod);
+    // }
 
     function dbInsert(Request $req){
         $data = $req->input();

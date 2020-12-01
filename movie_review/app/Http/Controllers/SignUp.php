@@ -12,9 +12,10 @@ class SignUp extends Controller
     function userSign(Request $req){
         $userData=user_date::all();
         $data = $req->input();
+        $salt = 'XyZzy12*_';
         $flag=0;
         foreach($userData as $value){
-            if($data['uname']==$value->uname && $data['psw']==$value->psw){
+            if($data['uname']==$value->uname){
                 $flag=1;
             }
         }
@@ -22,10 +23,10 @@ class SignUp extends Controller
         $req->session()->flash('failure','The username already exists');
         return redirect('/');
         }
-
+        $check = hash('md5', $salt.$req->psw);
         $addData = new user_date;
         $addData->uname = $req->uname;
-        $addData->psw = $req->psw;
+        $addData->psw = $check;
         $addData->save();
         $req->session()->put('user',$data['uname']);
         return redirect('index');
