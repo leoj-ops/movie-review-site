@@ -45,6 +45,8 @@ Route::group(['middleware'=>['protectedPage']],function(){
         return view('index');
     });
 
+    Route::get('/moviedata/{id}',[movieData::class, 'movieDb']);
+
 });
 
 Route::get('/insert', function () {
@@ -54,8 +56,6 @@ Route::get('/insert', function () {
 Route::get('/update', function () {
         return view('update');
 });
-
-
 
 Route::get('/delete', function () {
         return view('delete');
@@ -69,6 +69,6 @@ Route::post('dbInsert',[dbManager::class, 'dbInsert']);
 
 Route::post('dbDelete',[dbManager::class, 'dbDelete']);
 
-Route::get('/moviedata', function () {
-    return view('moviedata');
-});
+// Route::get('/moviedata', function () {
+//     return view('moviedata');
+// });

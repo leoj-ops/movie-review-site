@@ -30,7 +30,7 @@ class dbManager extends Controller
             $array = json_decode(json_encode($proDb), true);
             // DB::table('movies')->insert(['prod_id'=>$array[0]['prod_id']]);
         }
-        print_r($array);
+        // print_r($array);
         DB::table('movies')
         ->where('mov_id', $data['mov_id'])
         ->update(['prod_id'=>$array[0]['prod_id']]);
