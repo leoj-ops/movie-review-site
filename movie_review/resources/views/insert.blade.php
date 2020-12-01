@@ -14,7 +14,9 @@
 <body>
     <nav class="navbar admin-navbar">
         <ul>
-            <li class="nav-item"><a  href="/"><img class="logo-index" src="images/logo1.png" alt="Logo"></a></li>
+            <li class="nav-item">
+                <a  href="/"><img class="logo-index" src="images/logo1.png" alt="Logo"></a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" href="/display">Display</a>
             </li>

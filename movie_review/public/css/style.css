@@ -563,3 +563,10 @@ input{
     margin-left: 1300px;
     color: white;
 } 
+
+.error {
+	background-color: #020d18;
+	color: yellow;
+	margin: 0;
+	text-align: center;
+}

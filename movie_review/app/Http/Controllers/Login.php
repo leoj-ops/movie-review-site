@@ -22,7 +22,7 @@ class Login extends Controller
             }
         }
         if($flag==0){
-        $req->session()->flash('failure','The username or password is different');
+        $req->session()->flash('failure','Incorrect username and password');
         return redirect('/');
         }
         $req->session()->put('user',$data['uname']);

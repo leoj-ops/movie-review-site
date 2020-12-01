@@ -328,7 +328,7 @@ input {
     display: inline-block;
 }
 
-.video-containter .viewAll {
+.video-block .viewAll {
     display: inline-block;
     margin-left: 1300px;
     color: white;

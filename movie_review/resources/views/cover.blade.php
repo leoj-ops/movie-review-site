@@ -1,5 +1,5 @@
 @if(session('failure'))
-	<h3>{{session('failure')}}</h3>
+	<h3 class="error">{{session('failure')}}</h3>
 @endif
 <!DOCTYPE html>
 <html lang="en">

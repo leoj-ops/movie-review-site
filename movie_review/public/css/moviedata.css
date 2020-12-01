@@ -52,6 +52,10 @@ ul {
     padding: 20px;
 }
 
+.nav-link {
+	color: white;
+}
+
 .rate {
     float: left;
     height: 46px;

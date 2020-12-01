@@ -50,15 +50,53 @@
           </div>
           <img src="images/uploads/poster1.jpg" alt="">
         </div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        <div class="swiper-slide">Slide 4</div>
-        <div class="swiper-slide">Slide 5</div>
-        <div class="swiper-slide">Slide 6</div>
-        <div class="swiper-slide">Slide 7</div>
-        <div class="swiper-slide">Slide 8</div>
+        <div class="swiper-slide">
+          <div>
+            <h1>Godzilla</h1>
+            <ul>
+              <li>2014</li>
+              <li>123m</li>
+              <li>Sci-Fi</li>
+            </ul>
+          </div>
+          <img src="https://image.tmdb.org/t/p/w300/fOA44BITFth0u4hMSOUgpK0kM6t.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <div>
+            <h1>TIME TRAP</h1>
+            <ul>
+              <li>2017</li>
+              <li>95m</li>
+              <li>SciFi/Adventure</li>
+            </ul>
+          </div>
+          <img src="https://image.tmdb.org/t/p/w300/3qIBGXM6oXOu3wBYH6QpamXdXuB.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <div>
+            <h1>Spy</h1>
+            <ul>
+              <li>2015</li>
+              <li>130m</li>
+              <li>Comedy/Action</li>
+            </ul>
+          </div>
+          <img src="https://image.tmdb.org/t/p/w300/vPBmfMHxQvRRNGYD5S5ko2KnX56.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <div>
+            <h1>Black Swan</h1>
+            <ul>
+              <li>2010</li>
+              <li>150m</li>
+              <li>Thriller/Drama</li>
+            </ul>
+          </div>
+          <img src="https://image.tmdb.org/t/p/w300/rH19vkjAzCZ0HIUvrgB3rowm68h.jpg" alt="">
+        </div>
+        <!-- <div class="swiper-slide">Slide 8</div>
         <div class="swiper-slide">Slide 9</div>
-        <div class="swiper-slide">Slide 10</div>
+        <div class="swiper-slide">Slide 10</div> -->
       </div>
       <!-- Add Pagination -->
       <div class="swiper-pagination"></div>
@@ -75,7 +113,7 @@
     
     <div class="inTheater">
       <h1>IN THEATER</h1>
-      <a href="" class="viewAll">View All ></a>
+      <a href="/movies" class="viewAll">View All ></a>
     </div>
     <div class="swiper-container s2">
       <div class="swiper-wrapper">
@@ -202,12 +240,12 @@
   </div>    
 
   <div class="video-container">
-    <div>
+    <div class="video-block">
       <h1>IN THEATER</h1>
-      <a href="" class="viewAll">View All ></a>
+      <a href="/movies" class="viewAll">View All ></a>
     </div>
     <div class="embed-responsive embed-responsive-16by9 video">
-      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PL4cUxeGkcC9hL6aCFKyagrT1RCfVN4w2Q"></iframe>
+      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PL1DD10E84B9B08A35"></iframe>
     </div>
   </div>
   
