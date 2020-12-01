@@ -72,3 +72,7 @@ Route::post('dbDelete',[dbManager::class, 'dbDelete']);
 // Route::get('/moviedata', function () {
 //     return view('moviedata');
 // });
+
+Route::get('/feedback', function () {
+    return view('feedback');
+});

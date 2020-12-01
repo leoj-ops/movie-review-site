@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #020d18;
+    font-weight: 500;
+}
+
+.navbar {
+    background-color: rgb(1, 24, 37);
+}
+
+.navbar ul {
+    margin: 0px;
+}
+
+.nav-items {
+    color: white;
+    display: inline-block;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.nav-link {
+	color: white;
+}
+
+.container {
+    margin-top: 2vh;
+}
+
+.col-12 {
+    background-color:  rgb(196, 230, 7);;
+}
+
+h1 {
+    color: white;
+}
+
+.feedback-btn {
+    border:  rgb(196, 230, 7) solid 2px;
+    border-radius: 50px;
+    background-color: #020d18;
+    color: rgb(196, 230, 7);
+    margin-bottom: 2vh;
+    width: 10vw;
+    height: 5vh;
+    font-weight: 500;
+}

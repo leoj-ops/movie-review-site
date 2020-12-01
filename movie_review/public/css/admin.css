@@ -3,16 +3,16 @@ body {
 
 }
 
-.admin-navbar {
+.feedback-navbar {
     background-color: rgb(1, 24, 37);
 }
 
-.admin-navbar .nav-item {
+.feedback-navbar .nav-item {
     display: inline-block;
     margin: 0 0.8vw;
 }
 
-.admin-navbar .nav-link {
+.feedback-navbar .nav-link {
     color: white;    
 }
 

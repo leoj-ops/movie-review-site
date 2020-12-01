@@ -29,6 +29,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="/delete">Delete</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/feedback">Feedback</a>
+            </li>
         </ul>
     </nav>
 
