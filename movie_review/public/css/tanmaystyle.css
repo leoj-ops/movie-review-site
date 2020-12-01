@@ -103,7 +103,7 @@ footer ul {
 
 /* Search starts here */
 
-.search-bar{
+/* .search-bar{
     left: 50%;
     margin-left:50%;
     transform: translateX(-50%);
@@ -138,7 +138,7 @@ input {
     color: #233a50;
     background-color: #abb7c4;
     border-color: #020d18;
-}
+} */
 
 .search-slider {
     background: url("../images/uploads/slider-bg.jpg") no-repeat;

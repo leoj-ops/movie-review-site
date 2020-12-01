@@ -145,7 +145,7 @@ footer ul {
 	color: white;
 }
 /* Nav ends */
-::placeholder {
+/* ::placeholder {
 	color: #abb7c4;
 }
 
@@ -158,7 +158,7 @@ footer ul {
 	background-color: #dd003f;
 	border-color: white;
 	height: 60px;
-}
+} */
 /* Nav ends */
 /* Movie starts */
 .back {

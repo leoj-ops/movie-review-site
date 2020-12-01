@@ -32,48 +32,9 @@
   
   <div class="container-fluid search-slider">
 
-    <div class="search-bar">
+    <!-- <div class="search-bar">
       <input type="text" name="box" placeholder="Search for a movie"> 
       <button type="button" class="btn btn-outline-danger search-btn">Search</button>      
-    </div>
-
-    <!-- <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="carousel-caption d-none d-md-block">
-            <h1>GUARDIANS OF THE GALAXY</h1>
-            <p>GUARDIANS OF THE GALAXY</p>
-          </div>
-          <div class="container carousel-img">
-            <img src="images/uploads/poster1.jpg" alt="">
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          </div>
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
     </div> -->
     
     <div class="swiper-container s1">
