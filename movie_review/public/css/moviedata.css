@@ -5,6 +5,7 @@ body {
     background-color: #020d18;
     color: white;
     background-image: url("https://www.transparenttextures.com/patterns/food.png");
+    overflow-y: hidden;
 }
 
 .container {
@@ -105,4 +106,27 @@ ul {
     background-color: #020d18;
     color: rgb(196, 230, 7);
     /* padding: ; */
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.flex-child {
+    margin: 80px 40px;
+}
+
+footer {
+    background-color: #020d18;
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+footer ul {
+    padding-left: 20px;
 }

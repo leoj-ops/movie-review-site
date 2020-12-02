@@ -27,6 +27,7 @@
             <div class="col-md-8">
                 <h1>{{$movie[0]->mov_title}}</h1>
                 <h2>{{$movie[0]->mov_year}} . {{$movie[0]->mov_lang}}</h2>
+                <h2>{{$movie[0]->mov_genre}}</h2>
                 <div class="row">
                     <div class="col-md-8">
                         <h3 class="overview">Overview</h3>
@@ -41,6 +42,10 @@
                         </ul>
                     </div> 
                     <div class="col-md-4">
+                        <div>
+                            <h5>Runtime</h5>
+                            <p>{{$movie[0]->mov_len}} mins</p>
+                        </div>
                         <div>
                             <h5>Director</h5>
                             <p>{{$movie[0]->mov_dir}}</p>
@@ -63,6 +68,49 @@
             </div>
         </div>  
     </div>
-    
+    <footer class="ht-footer">
+		<div class="container">
+			<div class="flex-container">
+				<div class="flex-child item1">
+					<img class="logo-footer" src="/images/logo1.png" alt="">
+					<p>Mirzapur<br>
+					India Mumbai:400072</p>
+					<p>Call us: <a href="#">(+91) 99207 06862</a></p>
+				</div>
+				<div class="flex-child item2">
+					<h4>Resources</h4>
+					<ul>
+						<li><a href="#">About</a></li> 
+						<li><a href="#">Blockbuster</a></li>
+						<li><a href="#">Contact Us</a></li>
+						<li><a href="#">Forums</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Help Center</a></li>
+					</ul>
+				</div>
+				<div class="flex-child item3">
+					<h4>Legal</h4>
+					<ul>
+						<li><a href="#">Terms of Use</a></li> 
+						<li><a href="#">Privacy Policy</a></li>	
+						<li><a href="#">Security</a></li>
+					</ul>
+				</div>
+				<div class="flex-child item4">
+					<h4>Account</h4>
+					<ul>
+						<li><a href="#">My Account</a></li> 
+						<li><a href="#">Watchlist</a></li>	
+						<li><a href="#">Collections</a></li>
+						<li><a href="#">User Guide</a></li>
+					</ul>
+				</div>
+				<div class="flex-child item5">
+					<h4>Newsletter</h4>
+					<p>Subscribe to our newsletter system now <br> to get latest news from us.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>
