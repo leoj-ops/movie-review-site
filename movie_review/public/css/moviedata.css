@@ -4,6 +4,7 @@ body {
     box-sizing: border-box;
     background-color: #020d18;
     color: white;
+    background-image: url("https://www.transparenttextures.com/patterns/food.png");
 }
 
 .container {
@@ -103,5 +104,5 @@ ul {
     border-radius: 50px;
     background-color: #020d18;
     color: rgb(196, 230, 7);
-    padding: ;
+    /* padding: ; */
 }

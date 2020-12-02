@@ -4,6 +4,7 @@ body {
     box-sizing: border-box;
     background-color: #020d18;
     font-weight: 500;
+    background-image: url("https://www.transparenttextures.com/patterns/food.png");
 }
 
 .navbar {

@@ -1,18 +1,17 @@
 body {
     background-color: #020d18;
-
+    background-image: url("https://www.transparenttextures.com/patterns/food.png");
 }
-
-.feedback-navbar {
+.admin-navbar {
     background-color: rgb(1, 24, 37);
 }
 
-.feedback-navbar .nav-item {
+.admin-navbar .nav-item {
     display: inline-block;
     margin: 0 0.8vw;
 }
 
-.feedback-navbar .nav-link {
+.admin-navbar .nav-link {
     color: white;    
 }
 
