@@ -9,6 +9,7 @@
 			href="http://fonts.googleapis.com/css?family=Dosis:400,700,500|Nunito:300,400,600"
 		/>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/celeb.css">
     <link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"

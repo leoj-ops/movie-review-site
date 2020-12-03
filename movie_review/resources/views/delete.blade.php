@@ -27,11 +27,35 @@
         </ul>
     </nav>
     
-    <form class="delete" method="POST" action="dbDelete">
+    <!-- <form class="delete" method="POST" action="dbDelete">
         <label for="number">Movie ID</label>
         <input type="number" name="number" id="number">
         @csrf
         <button type="submit">Submit</button>
-    </form>
+    </form> -->
+
+    <div class="container mb-4 delete">
+        <div class="row justify-content-center">
+            <div class="col-md-6 bg-light form-box ">
+                <form action="dbDelete" method="POST">
+                    <h1 class="text-center">Delete Data</h1>
+                    <div class="row justify-content-center">
+                        <div class="col-12 mt-4">
+                            <div class="form-group">                            
+                                <label for="number">Movie ID</label>
+                                <input type="number" class="form-control" name="number" id="number">                          
+                            </div>
+                        </div>
+                        @csrf
+                        <div class="col-12 text-center">
+                            <button type="submit">Submit</button>
+                        </div>
+
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

@@ -8,7 +8,7 @@
     </div>
     <div class="flex-wrap-movielist mv-grid-fw">
     @foreach ($actor as $value)
-        <div class="movie-item-style-2 movie-item-style-1">
+        <div class="movie-item-style-4 movie-item-style-3">
             <img class="movie-img" src="{{$value->act_img}}" alt="">
             <div class="mv-item-infor">
                 <h6><a class="movie-a" href="#">{{$value->act_name}}</a></h6>

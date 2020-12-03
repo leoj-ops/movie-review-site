@@ -16,5 +16,5 @@ body {
 }
 
 .insert, .update, .delete {
-    color: white;
+    color: black;
 }
