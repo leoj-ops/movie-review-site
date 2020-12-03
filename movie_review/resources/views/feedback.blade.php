@@ -16,7 +16,7 @@
             <li class="nav-items"><img class="logo-index" src="images/logo1.png" alt="Logo"></li>
             <li class="nav-items"><a class="nav-link" href="/index">Home</a></li>
             <li class="nav-items"><a class="nav-link" href="/movies">Movies</a></li>
-            <li class="nav-items"><a class="nav-link" href="/index">celebrities</a></li>
+            <li class="nav-items"><a class="nav-link" href="/index">Celebrities</a></li>
             <li class="nav-items"><a class="nav-link" href="/feedback">Feedback</a></li>
             <li class="nav-items"><a class="nav-link" href="/logout">{{session('user')}}</a></li>        
         </ul>
