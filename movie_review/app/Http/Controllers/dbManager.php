@@ -105,7 +105,7 @@ class dbManager extends Controller
         $movId = json_decode(json_encode($mov), true);
         $cast = explode(',',$data['cast']);
         $cast_gender = explode(',',$data['act_gender']);
-        $cast_img = explode(',',$data['act_img']);
+        $cast_img = explode('#',$data['act_img']);
         $c=0;
         foreach($cast as $act){
             $act_value=DB::table('actor')->where('act_name','=',$act,)->exists();
@@ -119,11 +119,11 @@ class dbManager extends Controller
                 DB::table('actor')->insert(['act_name'=>$act, 'act_gender'=> $cast_gender[$c], 'act_img'=>$cast_img[$c]]);
                 $actDb = DB::table('actor')->whereIn('act_name',[$act])->get();
                 $array = json_decode(json_encode($actDb), true);
-                $c=$c+1;
                 // DB::table('movies')->insert(['prod_id'=>$array[0]['prod_id']]);
             }
             $actId = $array[0]['act_id'];
             // print_r($movId[0]['mov_id']);
+            $c=$c+1;
             DB::table('movie_cast')->insert(['mov_id' => $movId[0]['mov_id'], 'act_id' => $actId]);
         } 
         $req->session()->flash('message','The data has been inserted');
@@ -135,7 +135,7 @@ class dbManager extends Controller
         $data=$req->input();
         DB::table('movie_cast')->where('mov_id', '=', $data['number'])->delete();
         DB::table('movies')->where('mov_id', '=', $data['number'])->delete();
-        DB::table('reviews')->where('mov_id', '=', $data['number'])->delete();
+        // DB::table('reviews')->where('mov_id', '=', $data['number'])->delete();
         // DB::table('movie_cast')->where('mov_id', '=', $data['number'])->delete();
         $req->session()->flash('message','The data has been deleted');
         return redirect('/delete');
