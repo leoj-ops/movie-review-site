@@ -240,15 +240,58 @@
     </div>
   </div>    
 
-  <div class="video-container">
-    <div class="video-block">
-      <h1>IN THEATER</h1>
-      <a href="/movies" class="viewAll">View All ></a>
+  <div class="row">
+    <div class="col-md-8">
+        <div class="video-container">
+            <div class="video-block">
+              <h1>IN THEATER</h1>
+              <a href="/movies" class="viewAll">View All ></a>
+            </div>
+            <div class="embed-responsive embed-responsive-16by9 video">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PL1DD10E84B9B08A35"></iframe>
+            </div>
+        </div>
     </div>
-    <div class="embed-responsive embed-responsive-16by9 video">
-      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PL1DD10E84B9B08A35"></iframe>
+    <div class="col-md-4">
+        <h1 class="spotlight">SPOTLIGHT CELEBRITIES</h1>
+        <div class="swiper-container s3">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img class="s3-img" src="https://m.media-amazon.com/images/M/MV5BNzg1MTUyNDYxOF5BMl5BanBnXkFtZTgwNTQ4MTE2MjE@._V1_UX214_CR0,0,214,317_AL__QL50.jpg" alt="">
+              <h4 class="s3-name">ROBERT DOWNEY JR.</h4>
+            </div>
+            <div class="swiper-slide">
+              <img class="s3-img" src="https://m.media-amazon.com/images/M/MV5BOTU2MTI0NTIyNV5BMl5BanBnXkFtZTcwMTA4Nzc3OA@@._V1_UX214_CR0,0,214,317_AL__QL50.jpg" alt="">
+              <h4 class="s3-name">CHRIS HEMSWORTH</h4>
+            </div>
+            <div class="swiper-slide">
+              <img class="s3-img" src="https://m.media-amazon.com/images/M/MV5BMjE0MDkzMDQwOF5BMl5BanBnXkFtZTgwOTE1Mjg1MzE@._V1_UY317_CR2,0,214,317_AL__QL50.jpg" alt="">
+              <h4 class="s3-name">BENEDICT CUMBERBATCH</h4>
+            </div>
+            <div class="swiper-slide">
+              <img class="s3-img" src="https://m.media-amazon.com/images/M/MV5BMzQ5NTE2MDAzOV5BMl5BanBnXkFtZTgwOTQ3MTQ3MjE@._V1_UY317_CR27,0,214,317_AL__QL50.jpg" alt="">
+              <h4 class="s3-name">JANE FONDA</h4></div>
+              <div class="swiper-slide">
+              <img class="s3-img" src="https://m.media-amazon.com/images/M/MV5BNzg1MTUyNDYxOF5BMl5BanBnXkFtZTgwNTQ4MTE2MjE@._V1_UX214_CR0,0,214,317_AL__QL50.jpg" alt="">
+              <h4 class="s3-name">ROBERT DOWNEY JR.</h4>
+            </div>
+            <div class="swiper-slide">
+              <img class="s3-img" src="https://m.media-amazon.com/images/M/MV5BOTU2MTI0NTIyNV5BMl5BanBnXkFtZTcwMTA4Nzc3OA@@._V1_UX214_CR0,0,214,317_AL__QL50.jpg" alt="">
+              <h4 class="s3-name">CHRIS HEMSWORTH</h4>
+            </div>
+            <div class="swiper-slide">
+              <img class="s3-img" src="https://m.media-amazon.com/images/M/MV5BMjE0MDkzMDQwOF5BMl5BanBnXkFtZTgwOTE1Mjg1MzE@._V1_UY317_CR2,0,214,317_AL__QL50.jpg" alt="">
+              <h4 class="s3-name">BENEDICT CUMBERBATCH</h4>
+            </div>
+            <div class="swiper-slide">
+              <img class="s3-img" src="https://m.media-amazon.com/images/M/MV5BMzQ5NTE2MDAzOV5BMl5BanBnXkFtZTgwOTQ3MTQ3MjE@._V1_UY317_CR27,0,214,317_AL__QL50.jpg" alt="">
+              <h4 class="s3-name">JANE FONDA</h4></div>
+          </div>
+        </div>
     </div>
   </div>
+  
+  
   
 
   
@@ -326,8 +369,17 @@ var swiper1 = new Swiper('.s1', {
         nextEl: '.s2 .swiper-button-next',
         prevEl: '.s2 .swiper-button-prev',
       },
-    }    
-    );
+    });
+
+    var swiper = new Swiper('.s3', {
+      // autoHeight: true,
+      slidesPerView: 4,
+      direction: 'vertical',
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
   </script>
 
 

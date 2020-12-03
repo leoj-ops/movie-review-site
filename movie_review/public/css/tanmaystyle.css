@@ -32,7 +32,7 @@ body {
     margin: 119px 30px 200px 30px;
     width: 210px;
     border-radius: 25px;
-    radius: 25px;
+    
     border-radius: 25px;
     color: white;
     background-color: #dd003f;
@@ -63,7 +63,7 @@ body {
 }
 
 footer {
-    background-color: #020d18;
+    background-color: rgb(1, 24, 37);
     color: white;
 }
 
@@ -145,24 +145,6 @@ input {
     background: url("../images/uploads/slider-bg.jpg") no-repeat;
 }
 
-/* .carousel-item {
-    background-color: transparent;
-    height: 500px;
-  }
-
-.carousel-caption {
-    text-align: left;
-    margin-bottom: 320px;
-}
-
-.carousel-img {
-    text-align: right;
-}
-
-#carouselSecond{
-    background-color: #020d18;
-} */
-
 .s1 {
     width: 100%;
     height: 100%;
@@ -208,8 +190,6 @@ input {
 .s1 .swiper-slide-active {
     margin: 0 0 0 0;
 }
-.s1 .swiper-slide img {
-}
 
 .s2 {
     width: 80%;
@@ -236,7 +216,6 @@ input {
 }
 
 .secondSwiper {
-    background-color: #020d18;
     margin-bottom: 100px;
 }
 
@@ -319,18 +298,73 @@ input {
 }
 
 .video {
-    width: 40%;
-    margin-left: 220px;
+    width: 80%;
+    margin-left: 150px;
+}
+
+.video-container {
+    margin-bottom: 30px;
+}
+
+.video-block {
+    padding: 0;
+    /* display: inline-block; */
 }
 
 .video-container h1 {
-    padding: 60px 0px 60px 100px;
+    display: inline-block;
+    padding: 30px 0px 20px 100px;
     color: white;
     display: inline-block;
+    margin-bottom: 0;
 }
 
 .video-block .viewAll {
     display: inline-block;
-    margin-left: 1300px;
+    margin-left: 800px;
+    color: white;
+    
+}
+
+.s3 {
+    width: 100%;
+    height: 55vh;
+    
+  }
+
+.s3 .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    justify-content: left !important;
+    text-align: left !important;
+    
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.spotlight {
+    padding: 30px;
+    color: white;
+}
+
+.s3-img {
+    width: 15%;
+    height: 95%;
+    
+}
+
+.s3-name {
+    padding: 0 15px;
     color: white;
 }
