@@ -135,12 +135,31 @@ class dbManager extends Controller
         $data=$req->input();
         DB::table('movie_cast')->where('mov_id', '=', $data['number'])->delete();
         DB::table('movies')->where('mov_id', '=', $data['number'])->delete();
-        // DB::table('reviews')->where('mov_id', '=', $data['number'])->delete();
+        DB::table('reviews')->where('mov_id', '=', $data['number'])->delete();
         // DB::table('movie_cast')->where('mov_id', '=', $data['number'])->delete();
         $req->session()->flash('message','The data has been deleted');
         return redirect('/delete');
+    }
 
-        
+    function dbReview(Request $req){
+        $data = $req->input();
+        $date=date('Y-m-d');
+        // echo empty($data['comment']);
+        if(empty($data['comment'])){
+            DB::table('reviews')->where('mov_id', '=', $data['rev_btn'])->delete();
+            return redirect("/moviedata/{$data['rev_btn']}");
+        }
+        $customer=DB::table('customer')->where('cust_name','=',session('user'))->exists();
+        if($customer==1){
+            $cust_id=DB::table('customer')->select('cust_id')->where('cust_name','=',session('user'))->get();
+        }
+        else{
+            DB::table('customer')->insert(['cust_name'=>session('user')]);
+            $cust_id=DB::table('customer')->select('cust_id')->where('cust_name','=',session('user'))->get();
+        }
 
+        DB::table('reviews')->upsert(['mov_id'=>$data['rev_btn'], 'cust_id'=>$cust_id[0]->cust_id, 'review'=>$data['comment'], 'rev_timestamp'=>$date, 'rev_score'=>$data['rate']], ['mov_id', 'cust_id'], ['review', 'rev_timestamp', 'rev_score']);
+        return redirect("/moviedata/{$data['rev_btn']}");
+        // print_r($data);
     }
 }

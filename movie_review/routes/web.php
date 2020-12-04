@@ -74,6 +74,8 @@ Route::post('dbInsert',[dbManager::class, 'dbInsert']);
 Route::post('dbDelete',[dbManager::class, 'dbDelete']);
 
 Route::post('feedback',[movieData::class,'feedBack']);
+
+Route::get('/review',[dbManager::class, 'dbReview']);
 // Route::get('/moviedata', function () {
 //     return view('moviedata');
 // });
