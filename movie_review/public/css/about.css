@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    background-color: #27050b !important;
+    background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");    
+    /* overflow-y: hidden; */
+}
+
+.navbar {
+    background-color: #111111;
+}
+
+.navbar ul {
+    margin: 0px;
+}
+
+.nav-items {
+    color: white;
+    display: inline-block;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.nav-link {
+	color: white;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.flex-child {
+    margin: 80px 40px;
+}
+
+footer {
+    background-color: #111111;
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+footer ul {
+    padding-left: 20px;
+}
+
+.review-block {
+    height: 20%;
+    overflow-y: auto;
+}
+
+.card-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;   
+    margin: 40px;
+}
+
+.card-img-top {
+    
+}

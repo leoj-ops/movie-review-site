@@ -39,6 +39,10 @@ Route::get('/logout', function () {
 
 Route::group(['middleware'=>['protectedPage']],function(){
 
+    Route::get('/about', function () {
+        return view('about');
+    });
+
     Route::get('/movies',[movieData::class, 'viewMovies']);
 
     Route::get('/celebrities',[movieData::class, 'viewCelebrities']);

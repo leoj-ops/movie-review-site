@@ -172,7 +172,7 @@
 
                         @csrf
                         <div class="col-12 text-center">
-                            <button class="feedback-btn">Submit</button>
+                            <button class="db-btn" class="feedback-btn">Submit</button>
                         </div>
                         
                     </div>

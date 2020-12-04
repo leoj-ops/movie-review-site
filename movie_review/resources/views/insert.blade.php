@@ -167,7 +167,7 @@
 
                         @csrf
                         <div class="col-12 text-center">
-                            <button class="feedback-btn">Submit</button>
+                            <button class="db-btn">Submit</button>
                         </div>
                         
                     </div>

@@ -2,9 +2,9 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #020d18;
     color: white;
-    background-image: url("https://www.transparenttextures.com/patterns/food.png");
+    background-color: #27050b;
+    background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");    
     /* overflow-y: hidden; */
 }
 
@@ -19,11 +19,22 @@ body {
     margin-bottom: 10px;
 }
 
+.line2 {
+    width: 95%;
+    height: 0.5px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
 .overview {
     color: rgb(196, 230, 7);
 }
 
 .cast {
+    color: rgb(196, 230, 7);
+}
+
+.review {
     color: rgb(196, 230, 7);
 }
 
@@ -40,7 +51,7 @@ ul {
 }
 
 .navbar {
-    background-color: rgb(1, 24, 37);
+    background-color: #111111;
 }
 
 .navbar ul {
@@ -58,10 +69,21 @@ ul {
 	color: white;
 }
 
+.rev-btn {
+    border:  rgb(196, 230, 7) solid 2px;
+    border-radius: 50px;
+    background-color: #020d18;
+    color: rgb(196, 230, 7);
+    margin: 2vh 0;
+    width: 25%;
+    height: 5vh;
+    font-weight: 500;
+}
+
 .rate {
     float: left;
     height: 46px;
-    padding: 0 10px;
+        
 }
 .rate:not(:checked) > input {
     position:absolute;
@@ -119,7 +141,7 @@ ul {
 }
 
 footer {
-    background-color: #020d18;
+    background-color: #111111;
     color: white;
 }
 
@@ -129,4 +151,9 @@ footer a {
 
 footer ul {
     padding-left: 20px;
+}
+
+.review-block {
+    height: 20%;
+    overflow-y: auto;
 }

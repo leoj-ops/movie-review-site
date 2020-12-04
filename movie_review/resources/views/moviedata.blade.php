@@ -16,7 +16,9 @@
             <li class="nav-items"><a class="nav-link" href="/index">Home</a></li>
             <li class="nav-items"><a class="nav-link" href="/movies">Movies</a></li>
             <li class="nav-items"><a class="nav-link" href="/celebrities">Celebrities</a></li>
+            <li class="nav-items"><a class="nav-link" href="/about">About Us</a></li>
             <li class="nav-items"><a class="nav-link" href="/logout">{{session('user')}}</a></li>
+            
         </ul>
     </nav>
     <div class="container">
@@ -40,6 +42,40 @@
                             <li>{{$value[0]->act_name}}</li>
                         @endforeach	  
                         </ul>
+                        <h4 class="review">Reviews</h4>
+                        <div class="line"></div>
+                        <div>
+                            <form action="/review" method="GET">
+                                @csrf
+                                <!-- <h5 class="user-name">{{session('user')}}</h5>             -->
+                                <div class="rate">
+                                    <input type="radio" id="star5" name="rate" value="5" />
+                                    <label for="star5" title="text">5 stars</label>
+                                    <input type="radio" id="star4" name="rate" value="4" />
+                                    <label for="star4" title="text">4 stars</label>
+                                    <input type="radio" id="star3" name="rate" value="3" />
+                                    <label for="star3" title="text">3 stars</label>
+                                    <input type="radio" id="star2" name="rate" value="2" />
+                                    <label for="star2" title="text">2 stars</label>
+                                    <input type="radio" id="star1" name="rate" value="1" />
+                                    <label for="star1" title="text">1 star</label>
+                                </div>
+                                <div>
+                                    <textarea type="text" class="form-control pb-5" name="comment"></textarea>
+                                    <button class="rev-btn" name="rev_btn" value="{{$movie[0]->mov_id}}">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                        <h5>User reviews</h5>
+                        <div class="line"></div>
+                        <div class="review-block">
+                            @foreach ($review as $rev)
+                                <h6>{{$rev->cust_name}}  |  {{$rev->rev_score}}/5</h6>
+                                <p>{{$rev->review}}</p>
+                                <div class="line2"></div>
+                            @endforeach	 
+                        </div>
+                        
                     </div> 
                     <div class="col-md-4">
                         <div>
@@ -68,28 +104,7 @@
             </div>
         </div>  
     </div>
-    <div>
-        <form action="/review" method="GET">
-            @csrf
-            <div class="rate">
-                <input type="radio" id="star5" name="rate" value="5" />
-                <label for="star5" title="text">5 stars</label>
-                <input type="radio" id="star4" name="rate" value="4" />
-                <label for="star4" title="text">4 stars</label>
-                <input type="radio" id="star3" name="rate" value="3" />
-                <label for="star3" title="text">3 stars</label>
-                <input type="radio" id="star2" name="rate" value="2" />
-                <label for="star2" title="text">2 stars</label>
-                <input type="radio" id="star1" name="rate" value="1" />
-                <label for="star1" title="text">1 star</label>
-            </div>
-            <div>
-                <label for="comment">Review</label>
-                <textarea type="text" class="form-control" name="comment"></textarea>
-                <button name="rev_btn" value="{{$movie[0]->mov_id}}">Submit</button>
-            </div>
-        </form>
-    </div>
+    
     <footer class="ht-footer">
 		<div class="container">
 			<div class="flex-container">

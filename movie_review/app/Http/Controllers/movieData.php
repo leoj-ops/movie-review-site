@@ -30,6 +30,7 @@ class movieData extends Controller
         $prod_id = DB::table('movies')->select('prod_id')->whereIn('mov_id',[$id])->get();
         $prod = DB::table('production')->whereIn('prod_id',[$prod_id[0]->prod_id])->get();
         $review = DB::table('reviews')->join('customer', 'reviews.cust_id', '=', 'customer.cust_id')->get();
+        $count = DB::table('reviews')->count();
         // print_r($review);
         $array = json_decode(json_encode($cast), true);
         $act_id=array();
@@ -39,7 +40,7 @@ class movieData extends Controller
             array_push($actor,DB::table('actor')->whereIn('act_id',[$value['act_id']])->get());
         }
         
-        return view('moviedata')->with('movie', $movie)->with('actor', $actor)->with('prod', $prod)->with('review',$review);
+        return view('moviedata')->with('movie', $movie)->with('actor', $actor)->with('prod', $prod)->with('review',$review)->with('count',$count);
     }
 
     function feedBack(Request $req){

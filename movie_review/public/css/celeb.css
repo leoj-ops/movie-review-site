@@ -1,5 +1,6 @@
 .back {
-	background-color: #091a2c;
+	background-color: #27050b;
+    background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png"); 
 }
 .topbar-filter {
 	display: flex;

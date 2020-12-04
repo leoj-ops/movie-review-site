@@ -1,9 +1,9 @@
 body {
-    background-color: #020d18;
-    background-image: url("https://www.transparenttextures.com/patterns/food.png");
+    background-color: #27050b;
+    background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
 }
 .admin-navbar {
-    background-color: rgb(1, 24, 37);
+    background-color: #111111;
 }
 
 .admin-navbar .nav-item {
@@ -18,3 +18,18 @@ body {
 .insert, .update, .delete {
     color: black;
 }
+
+.db-btn {
+    border:  #111111 solid 3px;
+    border-radius: 50px;
+    background-color:white;
+    columns: #111111;
+    margin-bottom: 2vh;
+    width: 10vw;
+    height: 5vh;
+    font-weight: 500;
+}
+.form-box {
+    margin: 40px;
+}
+

@@ -48,7 +48,7 @@
                         </div>
                         @csrf
                         <div class="col-12 text-center">
-                            <button type="submit">Submit</button>
+                            <button class="db-btn" type="submit">Submit</button>
                         </div>
 
                         
