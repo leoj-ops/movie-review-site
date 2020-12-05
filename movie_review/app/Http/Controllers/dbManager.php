@@ -62,6 +62,7 @@ class dbManager extends Controller
             DB::table('movie_cast')
             ->where('mov_id', $data['mov_id'])
             ->update(['act_id' => $actId]);
+            $c=$c+1;
         } 
         $req->session()->flash('message','The data has been updated');
         return redirect('/update');
