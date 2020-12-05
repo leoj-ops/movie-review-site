@@ -143,7 +143,8 @@ input {
 } */
 
 .search-slider {
-    background: url("../images/uploads/slider-bg.jpg") no-repeat;
+    
+    background: linear-gradient(to bottom, rgba(17, 0, 1, 0.80), rgba(34, 0, 0, 0.80)),url("../images/slider-back.jpg") no-repeat;
 }
 
 .s1 {

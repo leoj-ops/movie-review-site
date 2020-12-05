@@ -67,11 +67,15 @@
                             </form>
                         </div>
                         @if(count($review) > 0)
-                        <h5>User reviews  {{$count}}-comment(s)</h5>    
+                        <h5 style="text-align:left;float:left;">User reviews</h5>
+                        <h6 style="text-align:right;float:right;">{{$count}}-comment(s)</h6>    
+                        <hr style="clear:both;"/>
                         <div class="line"></div>
                         <div class="review-block">
                             @foreach ($review as $rev)
-                                <h6>{{$rev->cust_name}}  |  {{$rev->rev_score}}/5</h6>
+                                <h6 style="text-align:left;float:left;">{{$rev->cust_name}}</h6>
+                                <h6 style="text-align:right;float:right;">{{$rev->rev_score}}/5 | {{$rev->rev_timestamp}}</h6>
+                                <hr style="clear:both;"/>
                                 <p>{{$rev->review}}</p>
                                 <div class="line2"></div>
                             @endforeach	 

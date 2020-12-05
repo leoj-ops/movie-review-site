@@ -2,12 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 body {
 	margin: 0px;
-	/* overflow-x: hidden; */
+	/* overflow-y: hidden; */
 	background-image: url("https://www.transparenttextures.com/patterns/food.png");
+
 }
 
 .slider {
-	background: url("../images/uploads/slider-bg.jpg") no-repeat;
+	background: linear-gradient(to bottom, rgba(17, 0, 1, 0.80), rgba(34, 0, 0, 0.80)),url("../images/slider-back.jpg") no-repeat;
+	/* background: url("../images/uploads/slider-bg.jpg") no-repeat; */
 	box-shadow: inset 0 0 1000px rgba(0, 0, 0, 0.5);
 	padding: 0;
 }
