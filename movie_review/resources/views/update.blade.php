@@ -27,6 +27,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="/delete">Delete</a>
             </li>
+            <li class="nav-item"><a class="nav-link" href="/logout">{{session('user')}}</a></li> 
         </ul>
     </nav>
     

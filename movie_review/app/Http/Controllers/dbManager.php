@@ -157,8 +157,10 @@ class dbManager extends Controller
             DB::table('customer')->insert(['cust_name'=>session('user')]);
             $cust_id=DB::table('customer')->select('cust_id')->where('cust_name','=',session('user'))->get();
         }
-
-        DB::table('reviews')->upsert(['mov_id'=>$data['rev_btn'], 'cust_id'=>$cust_id[0]->cust_id, 'review'=>$data['comment'], 'rev_timestamp'=>$date, 'rev_score'=>$data['rate']], ['mov_id', 'cust_id'], ['review', 'rev_timestamp', 'rev_score']);
+        print_r(session('user'));
+        print_r($data['rev_btn']);
+        // DB::table('reviews')->upsert(['mov_id'=>$data['rev_btn'], 'cust_id'=>$cust_id[0]->cust_id, 'review'=>$data['comment'], 'rev_timestamp'=>$date, 'rev_score'=>$data['rate']], ['mov_id', 'cust_id'], ['review', 'rev_timestamp', 'rev_score']);
+        DB::table('reviews')->updateOrInsert(['mov_id'=>$data['rev_btn'], 'cust_id'=>$cust_id[0]->cust_id], ['review'=>$data['comment'], 'rev_timestamp'=>$date, 'rev_score'=>$data['rate']]);
         return redirect("/moviedata/{$data['rev_btn']}");
         // print_r($data);
     }

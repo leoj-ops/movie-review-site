@@ -15,7 +15,8 @@ class Login extends Controller
         $salt = 'XyZzy12*_';
         $check = hash('md5', $salt.$data['psw']);
         $flag=0;
-        if($data['uname']=='admin'){
+        if($data['uname']=='admin' && $data['psw']=='1234Admin'){
+            $req->session()->put('user',$data['uname']);
             return redirect('/insert');
         }
         foreach($userData as $value){

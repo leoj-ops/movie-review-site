@@ -66,7 +66,8 @@
                                 </div>
                             </form>
                         </div>
-                        <h5>User reviews</h5>
+                        @if(count($review) > 0)
+                        <h5>User reviews  {{$count}}-comment(s)</h5>    
                         <div class="line"></div>
                         <div class="review-block">
                             @foreach ($review as $rev)
@@ -75,7 +76,7 @@
                                 <div class="line2"></div>
                             @endforeach	 
                         </div>
-                        
+                        @endif
                     </div> 
                     <div class="col-md-4">
                         <div>

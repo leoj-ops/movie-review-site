@@ -29,8 +29,8 @@ class movieData extends Controller
         $cast = DB::table('movie_cast')->select('act_id')->whereIn('mov_id',[$id])->get();
         $prod_id = DB::table('movies')->select('prod_id')->whereIn('mov_id',[$id])->get();
         $prod = DB::table('production')->whereIn('prod_id',[$prod_id[0]->prod_id])->get();
-        $review = DB::table('reviews')->join('customer', 'reviews.cust_id', '=', 'customer.cust_id')->get();
-        $count = DB::table('reviews')->count();
+        $review = DB::table('reviews')->join('customer', 'reviews.cust_id', '=', 'customer.cust_id')->whereIn('mov_id',[$id])->get();
+        $count = DB::table('reviews')->join('customer', 'reviews.cust_id', '=', 'customer.cust_id')->whereIn('mov_id',[$id])->count();
         // print_r($review);
         $array = json_decode(json_encode($cast), true);
         $act_id=array();
