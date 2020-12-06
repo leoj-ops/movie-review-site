@@ -27,28 +27,28 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <img class="card-img-top" src="/images/photo2.jpeg" alt="Card image cap" height='290px'>
                     <div class="card-body">
                         <h5 class="card-title">Calisto Gomes</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, architecto quaerat numquam omnis doloribus excepturi voluptatibus ab porro laboriosam!</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <img class="card-img-top" src="/images/photo1.jpeg" alt="Card image cap" height='290px'>
                     <div class="card-body">
                         <h5 class="card-title">Tanmay Hatkar</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, architecto quaerat numquam omnis doloribus excepturi voluptatibus ab porro laboriosam!</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <img class="card-img-top" src="/images/photo3.jpeg" alt="Card image cap" height='290px'>
                     <div class="card-body">
                         <h5 class="card-title">Joel Jose Abraham</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, architecto quaerat numquam omnis doloribus excepturi voluptatibus ab porro laboriosam!</p>
                     </div>
                 </div>
             </div>

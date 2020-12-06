@@ -146,7 +146,7 @@ class dbManager extends Controller
         $data = $req->input();
         $date=date('Y-m-d');
         // echo empty($data['comment']);
-        if(empty($data['comment'])){
+        if(empty($data['comment']) && empty($data['rate'])){
             DB::table('reviews')->where('mov_id', '=', $data['rev_btn'])->delete();
             return redirect("/moviedata/{$data['rev_btn']}");
         }
